@@ -1,0 +1,51 @@
+﻿@model AptitudeTest.WebApp.Models.Exam
+
+@{
+    ViewData["Title"] = "CreateExam";
+}
+
+<h1>CreateExam</h1>
+
+<h4>Exam</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="CreateExam">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+                <span class="text-danger">@Html.ValidationMessage("TitleExistErr")</span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TakeRandomCount" class="control-label"></label>
+                <input asp-for="TakeRandomCount" class="form-control" />
+                <span asp-validation-for="TakeRandomCount" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="CREATE" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="AllExam">Back to List</a>
+</div>
+

@@ -1,0 +1,135 @@
+﻿@using AptitudeTest.WebApp.Models.Enum;
+@model AptitudeTest.WebApp.Models.User
+
+@{
+    ViewData["Title"] = "UpdateCandidate";
+}
+
+<h1>UpdateCandidate</h1>
+
+<h4>User</h4>
+<hr />
+<div class="content container-registerform">
+    <form method="post" asp-action="UpdateCandidate">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (!string.IsNullOrEmpty(Model.ProfilePicture))
+        {
+            <img style="border-radius: 50%; width: 200px; height: 200px; margin: 0 430px 0 430px" src="~/profileimg/@Model.ProfilePicture" alt="Profile Picture" />
+        }
+        else
+        {
+            <div style="width: 100px; height: 100px; background-color: #ccc; margin: -20px 200px 0 200px; border-radius: 50%"></div>
+        }
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="ProfilePicture" />
+            <input type="hidden" asp-for="ResumeFile" />
+            <input type="hidden" asp-for="IsActive" />
+
+            <div class="details">
+                <span class="title">Personal Details</span>
+                <div class="fields">
+                    <div class="input-field">
+
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                        <label>First Name</label>
+                        <input asp-for="FirstName" type="text"/>
+                    </div>
+
+                    <div class="input-field">
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                        <label>Last Name</label>
+                        <input asp-for="LastName" type="text"/>
+                    </div>
+
+                    <div class="input-field">
+                        <span asp-validation-for="BirthDay" class="text-danger"></span>
+                        <label>Date of Birth</label>
+                        <input type="date" asp-for="BirthDay" class="form-control"/>
+                    </div>
+
+
+                    <div class="input-field">
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        <span class="text-danger">@Html.ValidationMessage("PhoneExistErr")</span>
+                        <label>Mobile Number</label>
+                        <input asp-for="PhoneNumber" type="text"/>
+                    </div>
+
+
+
+                    <div class="input-field">
+                        <label>Gender</label>
+                        <select asp-for="Gender">
+                            <option disabled selected>Select gender</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field">
+                        <span asp-validation-for="Address" class="text-danger"></span>
+
+                        <label>Address</label>
+                        <input asp-for="Address" type="text" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="input-field school">
+                    <span class="title">Your School</span>
+                    <div>
+                        <label>School:</label>
+                        <select asp-for="School">
+                            <option disabled selected>Select a school...</option>
+                            @foreach (School university in Enum.GetValues(typeof(School)))
+                            {
+                                <option value="@university">@university</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="input-field text-area">
+                    <span class="title">Cover Letter</span>
+                    <textarea asp-for="CoverLetter"></textarea>
+                    <span asp-validation-for="CoverLetter" class="text-danger"></span>
+                </div>
+            </div>
+        <div class="details">
+            <div class="input-field username">
+                <span class="title">Email</span>
+                <input asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+            <div class="details">
+                <div class="input-field username">
+                    <span class="title">UserName</span>
+                    <input asp-for="UserName"/>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="details">
+                <div class="input-field password">
+                    <span class="title">Password</span>
+                    <input asp-for="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+
+        <div class="form-group">
+            <input style="margin: 10px 300px 0 300px" type="submit" value="UPDATE" class="btn btn-primary" />
+            @if (!Model.IsActive)
+            {
+                <input style="margin: 10px 300px 0 300px" asp-action="VerifyCandidate" type="submit" value="VERIFY" class="btn btn-primary" />
+            }
+        </div>
+    </form>
+    <div>
+        <a asp-action="AllCandidate">Back to List</a>
+    </div>
+</div>

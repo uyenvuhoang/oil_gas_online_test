@@ -1,0 +1,52 @@
+﻿@model AptitudeTest.WebApp.Models.Exam
+
+@{
+    ViewData["Title"] = "UpdateExam";
+}
+
+<h1>UpdateExam</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="UpdateExam">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TakeRandomCount" class="control-label"></label>
+                <input asp-for="TakeRandomCount" class="form-control" />
+                <span asp-validation-for="TakeRandomCount" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="UPDATE" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="AllExam">Back to List</a>
+</div>
+

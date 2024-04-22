@@ -1,0 +1,121 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="keywords" content="">
+    <title>Oil &amp; Gas Industrial</title>
+    <!-- Bootstrap -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Style CSS -->
+    <link href="~/oil-gas/css/style.css" rel="stylesheet">
+    <link href="~/oil-gas/css/applicationform.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="~/oil-gas/css/owl.carousel.css" rel="stylesheet">
+    <link href="~/oil-gas/css/owl.theme.default.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" type="text/css" href="~/oil-gas/css/fontello.css">
+    <link href="~/oil-gas/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/lib/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="~/oil-gas/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <!-- header-section-->
+    <div class="header-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
+                    <div class="logo-container">
+                        <a asp-controller="Authenticate" asp-action="Index"><img src="~/oil-gas/images/logo1.png" style="width: 110px; margin: -50px 0 -100px 0" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-6 col-sm-12 col-x">
+                    <!-- navigations-->
+                    <div class="navigation">
+                        <div id="navigation">
+                            <ul>
+                                <li class="active"><a asp-controller="Authenticate" asp-action="Login">Login</a></li>
+
+
+                                <li class="active"><a asp-controller="Authenticate" asp-action="EnterEmail">Apply</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.navigations-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /. header-section-->
+    @RenderBody()
+    <!-- /.locations -->
+    <!-- footer -->
+    <div class="footer" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <!-- about-us -->
+                <div class="col-lg-8">
+                    <div class="footer-widget">
+                        <div class="oil-gas"><img src="~/oil-gas/images/logo1.png" style="width: 200px" alt=""></div>
+                        <p>Webster is a global energy company that is focused on acquiring, exploring and developing large acreage positions of unconventional oil and gas resources.</p>
+                    </div>
+                </div>
+                <!-- /.about us -->
+                <!-- footer-info -->
+                <div class="col-md-4">
+                    <div class="footer-widget">
+                        <br>
+                        <h3 class="footer-title">Contact Info</h3>
+                        <div class="contact-info">
+                            <p class="contact-address">2435 Shearwood Forest Drive Colebrook, Ahmedabad-16</p>
+                            <p class="contact-number ">+1800-123-4567</p>
+                            <span class="contact-icon"><i class="icon-mail-4"></i></span>
+                            <p>Webster@oilgascompany.com</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- tiny-footer -->
+    <div class="tiny-footer" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    Copyright © All Rights Reserved 2023
+                    <!-- /. tiny-footer -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/oil-gas/js/menumaker.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/oil-gas/js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="~/oil-gas/js/sticky-header.js"></script>
+    <script type="text/javascript" src="~/oil-gas/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="~/oil-gas/js/multiple-carousel.js"></script>
+    <script src="~/sbadmin/js/sb-admin-2.min.js"></script>
+    <script src="~/lib/jquery-easing/jquery.easing.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+
+</html>

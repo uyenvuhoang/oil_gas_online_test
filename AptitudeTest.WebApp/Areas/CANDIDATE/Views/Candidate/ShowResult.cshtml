@@ -1,0 +1,20 @@
+﻿@model FinalResultViewModel
+
+<h1>Candidate info: <strong>@Model.UserInfo.UserName</strong></h1>
+
+<h1>Final Result of <strong>@Model.ExamInfo.Title</strong> Exam</h1>
+
+<h2>Result: <strong>@Model.FinalResult.CountCorrect</strong> / 5</h2>
+<h2>Status: <strong>@Model.FinalResult.Status</strong></h2>
+
+@if(Model.ExamInfo.Id <= 3)
+{
+    <a asp-area="CANDIDATE" asp-controller="Candidate" asp-action="AttendExam" asp-route-examId="@Model.NextExamId">Next Exam</a>
+}
+else
+{
+    <h2>You have done all your Exam, please wait for result!!!</h2>
+}
+
+
+

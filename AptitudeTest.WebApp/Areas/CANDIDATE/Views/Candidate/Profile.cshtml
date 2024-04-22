@@ -1,0 +1,149 @@
+﻿@model CandidateProfileViewModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="container" style="margin-top: 30px">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                @if (!string.IsNullOrEmpty(Model.ProfilePicture))
+                {
+                    <img style="border-radius: 50%; width: 200px; height: 200px; margin: 0 430px 0 430px" src="~/profileimg/@Model.ProfilePicture" alt="Profile Picture" />
+                }
+                <form method="post" asp-area="CANDIDATE" asp-controller="Candidate" asp-action="UpdateProfile">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="Email" />
+                    <input type="hidden" asp-for="Password" />
+
+                    <div class="row mb-3">
+                        <div class="col-sm-4">
+                            <h3 class="mb-0">User Name</h3>
+                        </div>
+                        <div class="col-sm-12 text-secondary">
+                            <input class="form-control" asp-for="UserName">
+                        </div>
+                        <span class="text-danger">@Html.ValidationMessageFor(model => model.UserName)</span>
+                    </div>
+
+                    <div class="row gx-3 mb-3">
+                        <!-- Form Group (first name)-->
+                        <div class="col-md-6">
+                            <h3 class="mb-0">First Name</h3>
+                            <input class="form-control" asp-for="FirstName">
+                        </div>
+                        <!-- Form Group (last name)-->
+                        <div class="col-md-6">
+                            <h3 class="mb-0">Last Name</h3>
+                            <input class="form-control" asp-for="LastName">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-4">
+                            <h3 class="mb-0">Phone</h3>
+                        </div>
+                        <div class="col-sm-12 text-secondary">
+                            <input class="form-control" asp-for="PhoneNumber">
+                        </div>
+                        <span class="text-danger">@Html.ValidationMessageFor(model => model.PhoneNumber)</span>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-4">
+                            <h3 class="mb-0">Date of Birth</h3>
+                        </div>
+                        <div class="col-sm-12 text-secondary">
+                            <input class="form-control" asp-for="BirthDay">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+
+                        <div class="col-sm-9 text-secondary" style="margin-left: 40%">
+                            <input type="submit" value="CHANGE YOUR PROFILE" class="btn btn-primary" />
+                        </div>
+
+
+                        <div class="col-sm-9 text-secondary" style="margin-left: 40%">
+                            <a asp-action="OTPVerify" asp-route-id="@Model.Id">Change Password</a>
+                        </div>
+
+                        <div class="col-sm-9 text-secondary" style="margin-left: 40%">
+                            <a asp-action="Index">Back to Home</a>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="row">
+                    <h2>Your Exam Result</h2>
+                </div>
+
+                @if (Model.FinalResultList.Count() == 0)
+                {
+                    <div>
+                        <h2>Please Take Exam to Record Your Result</h2>
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Exam Name</th>
+                                    <th>Mark</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.FinalResultList)
+                                {
+                                    <tr>
+                                        <td>@item.Exam.Title</td>
+                                        @if (item.CountCorrect >= 3)
+                                        {
+                                            <td style="color:forestgreen">@item.CountCorrect</td>
+                                        }
+                                        else
+                                        {
+                                            <td style="color:red">@item.CountCorrect</td>
+                                        }
+                                        @if (item.Status == true)
+                                        {
+                                            <td style="color:forestgreen">PASS</td>
+                                        }
+                                        else
+                                        {
+                                            <td style="color:red">FAIL</td>
+                                        }
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // JavaScript to handle password confirmation
+        const newPasswordInput = document.getElementById("Password");
+        const confirmPasswordInput = document.getElementById("confirmPassword");
+
+        confirmPasswordInput.addEventListener("input", function () {
+            if (newPasswordInput.value !== confirmPasswordInput.value) {
+                confirmPasswordInput.setCustomValidity("Passwords do not match.");
+            } else {
+                confirmPasswordInput.setCustomValidity("");
+            }
+        });
+    </script>
+}

@@ -1,0 +1,114 @@
+﻿@model AptitudeTest.WebApp.ViewModels.CandidateProfileViewModel
+
+@{
+    ViewData["Title"] = "DetailCandidate";
+}
+
+<h1>Detail of Candidate</h1>
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BirthDay)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BirthDay)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+    </dl>
+</div>
+
+
+<div class="row">
+    <h2>Your Exam Result</h2>
+</div>
+
+@if (Model.FinalResultList.Count() == 0)
+{
+    <div>
+        <h2>Please Take Exam to Record Your Result</h2>
+    </div>
+}
+else
+{
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Exam Name</th>
+                    <th>Mark</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.FinalResultList)
+                {
+                    <tr>
+                        <td>@item.Exam.Title</td>
+                        @if (item.CountCorrect >= 3)
+                        {
+                            <td style="color:forestgreen">@item.CountCorrect</td>
+                        }
+                        else
+                        {
+                            <td style="color:red">@item.CountCorrect</td>
+                        }
+                        @if (item.Status == true)
+                        {
+                            <td style="color:forestgreen">PASS</td>
+                        }
+                        else
+                        {
+                            <td style="color:red">FAIL</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<div>
+    <a asp-action="Dashboard">Back to Dashboard</a>
+</div>

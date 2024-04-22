@@ -1,0 +1,179 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|d:\\a-study\\project_sem3\\oilgasonlinetest\\aptitudetest.webapp\\views\\authenticate\\enteremail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|solutionrelative:aptitudetest.webapp\\views\\authenticate\\enteremail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|d:\\a-study\\project_sem3\\oilgasonlinetest\\aptitudetest.webapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|solutionrelative:aptitudetest.webapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|d:\\a-study\\project_sem3\\oilgasonlinetest\\aptitudetest.webapp\\areas\\manager\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|solutionrelative:aptitudetest.webapp\\areas\\manager\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|d:\\a-study\\project_sem3\\oilgasonlinetest\\aptitudetest.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|solutionrelative:aptitudetest.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|d:\\a-study\\project_sem3\\oilgasonlinetest\\aptitudetest.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|solutionrelative:aptitudetest.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|d:\\a-study\\project_sem3\\oilgasonlinetest\\aptitudetest.webapp\\views\\authenticate\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|solutionrelative:aptitudetest.webapp\\views\\authenticate\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|d:\\a-study\\project_sem3\\oilgasonlinetest\\aptitudetest.webapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|solutionrelative:aptitudetest.webapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|d:\\a-study\\project_sem3\\oilgasonlinetest\\aptitudetest.webapp\\viewmodels\\myviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|solutionrelative:aptitudetest.webapp\\viewmodels\\myviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|d:\\a-study\\project_sem3\\oilgasonlinetest\\aptitudetest.webapp\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590B9526-0048-4C4B-B720-AF3C44B90E1E}|AptitudeTest.WebApp\\AptitudeTest.WebApp.csproj|solutionrelative:aptitudetest.webapp\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnterEmail.cshtml",
+              "DocumentMoniker": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Views\\Authenticate\\EnterEmail.cshtml",
+              "RelativeDocumentMoniker": "AptitudeTest.WebApp\\Views\\Authenticate\\EnterEmail.cshtml",
+              "ToolTip": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Views\\Authenticate\\EnterEmail.cshtml",
+              "RelativeToolTip": "AptitudeTest.WebApp\\Views\\Authenticate\\EnterEmail.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T02:16:40.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "AptitudeTest.WebApp\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "AptitudeTest.WebApp\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T02:16:31.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MyViewModel.cs",
+              "DocumentMoniker": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\ViewModels\\MyViewModel.cs",
+              "RelativeDocumentMoniker": "AptitudeTest.WebApp\\ViewModels\\MyViewModel.cs",
+              "ToolTip": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\ViewModels\\MyViewModel.cs",
+              "RelativeToolTip": "AptitudeTest.WebApp\\ViewModels\\MyViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T05:10:25.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "AptitudeTest.WebApp\\Data\\SeedData.cs",
+              "ToolTip": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Data\\SeedData.cs",
+              "RelativeToolTip": "AptitudeTest.WebApp\\Data\\SeedData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T05:10:25.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "AptitudeTest.WebApp\\appsettings.Development.json",
+              "ToolTip": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\appsettings.Development.json",
+              "RelativeToolTip": "AptitudeTest.WebApp\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-18T05:10:25.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Views\\Authenticate\\Register.cshtml",
+              "RelativeDocumentMoniker": "AptitudeTest.WebApp\\Views\\Authenticate\\Register.cshtml",
+              "ToolTip": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Views\\Authenticate\\Register.cshtml",
+              "RelativeToolTip": "AptitudeTest.WebApp\\Views\\Authenticate\\Register.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-18T05:10:25.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "AptitudeTest.WebApp\\appsettings.json",
+              "ToolTip": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\appsettings.json",
+              "RelativeToolTip": "AptitudeTest.WebApp\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-18T05:10:25.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "AptitudeTest.WebApp\\Program.cs",
+              "ToolTip": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Program.cs",
+              "RelativeToolTip": "AptitudeTest.WebApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T05:10:25.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManagerController.cs",
+              "DocumentMoniker": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Areas\\MANAGER\\Controllers\\ManagerController.cs",
+              "RelativeDocumentMoniker": "AptitudeTest.WebApp\\Areas\\MANAGER\\Controllers\\ManagerController.cs",
+              "ToolTip": "D:\\A-Study\\Project_Sem3\\OilGasOnlineTest\\AptitudeTest.WebApp\\Areas\\MANAGER\\Controllers\\ManagerController.cs",
+              "RelativeToolTip": "AptitudeTest.WebApp\\Areas\\MANAGER\\Controllers\\ManagerController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T05:10:25.752Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

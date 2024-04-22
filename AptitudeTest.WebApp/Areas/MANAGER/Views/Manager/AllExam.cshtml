@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AptitudeTest.WebApp.Models.Exam>
+
+@{
+    ViewData["Title"] = "AllExam";
+}
+
+<h1>AllExam</h1>
+
+@if (TempData["Success"] != null)
+{
+    <h2 class="text-success">@TempData["Success"]</h2>
+}
+
+<p>
+    <a asp-action="CreateExam">Create New Exam</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TakeRandomCount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                   @item.Time Minutes
+                </td>
+                <td>
+                    @item.TakeRandomCount
+                </td>
+                <td>
+                    <a asp-area="MANAGER" asp-controller="Manager" asp-action="UpdateExam" asp-route-id="@item.Id">Update</a>
+                    <a asp-area="MANAGER" asp-controller="Manager" asp-action="DeleteExam" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<QnA>
+
+@{
+    ViewData["Title"] = "AllQnAByExam";
+}
+
+<h1>All QnA of @ViewBag.ExamTitle</h1>
+
+<p>
+    <a asp-area="MANAGER" 
+       asp-controller="Manager" 
+       asp-action="CreateQnA" 
+       asp-route-examTitle="@ViewBag.ExamTitle">Create New QnA for @ViewBag.ExamTitle Exam</a>
+</p>
+
+<p>
+    <a asp-area="MANAGER"
+       asp-controller="Manager"
+       asp-action="Dashboard">Back to Dashboard </a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Question
+            </th>
+            <th>
+                Option 1
+            </th>
+            <th>
+                Option 2
+            </th>
+            <th>
+                Option 3
+            </th>
+            <th>
+                Option 4
+            </th>
+            <th>
+                Correct Answer
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Question)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Option1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Option2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Option3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Option4)
+                </td>
+                <td>
+                    Option @item.TheAnswer
+                </td>
+                <td>
+                    <a asp-area="MANAGER" asp-controller="Manager" asp-action="UpdateQnA" asp-route-id="@item.Id">Update</a>
+                    <a asp-area="MANAGER" asp-controller="Manager" asp-action="DeleteQnA" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

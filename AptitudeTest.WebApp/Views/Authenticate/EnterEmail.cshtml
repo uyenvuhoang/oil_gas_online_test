@@ -1,0 +1,33 @@
+﻿@model EmailViewModel
+
+<div class="container">
+    <div class="login-box" style="margin: 100px 200px">
+        <div class="card">
+            <div class="card-body login-card-body">
+                <h1 class="font-weight-bold text-center">Sign up to your account</h1>
+
+                <form asp-controller="Authenticate" asp-antiforgery="true" asp-action="SendOTP" method="post">
+
+                    <div class="input-group mb-3" style="width: 70% ;padding: 10px 0 10px 0px; margin-left: 100px">
+                        <input asp-for="Email" class="form-control" placeholder="Email" />
+                        <div class="input-group-append" style="height: 50px;">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 70% ;padding: 0px 0 20px 0px; margin-left: 100px">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                        <span class="text-danger">@Html.ValidationMessage("EmailExist")</span>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block" style="border-radius:30px;">Send OTP</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

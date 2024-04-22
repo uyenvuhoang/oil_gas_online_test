@@ -1,0 +1,96 @@
+﻿@model IEnumerable<AptitudeTest.WebApp.Models.User>
+
+@{
+    ViewData["Title"] = "AllCandidate";
+}
+
+<h1>All Candidate</h1>
+
+<p>
+    <a asp-action="CreateCandidate">Create New Candidate</a>
+</p>
+
+@if (TempData["Success"] != null)
+{
+    <h2 class="text-success">@TempData["Success"]</h2>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                FullName
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="DetailCandidate" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Email)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @item.FirstName @item.LastName
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @item.BirthDay.Day/@item.BirthDay.Month/@item.BirthDay.Year
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Role)
+                </td>
+                <td>
+                    @if(item.IsActive == true)
+                    {
+                        <span style="color:forestgreen;">Online</span>
+                    }
+                    else
+                    {
+                        <span style="color:yellow;">Waiting...</span>
+                    }
+                </td>
+                <td>
+                   <a asp-area="MANAGER" 
+                      asp-controller="Manager" 
+                      asp-action="UpdateCandidate" 
+                      asp-route-id="@item.Id">Update</a> |
+
+                   <a asp-area="MANAGER"
+                    asp-controller="Manager"
+                    asp-action="DeleteCandidate"
+                    asp-route-id="@item.Id">Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Dashboard">Back to Dashboard</a>
+</div>

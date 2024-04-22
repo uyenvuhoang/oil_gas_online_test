@@ -1,0 +1,67 @@
+﻿@model CandidateIndexViewModel
+@{
+    ViewData["Title"] = "ReadyForExam";
+}
+
+<section class="attend-test">
+    <div class="container">
+        @if (Model.Exams.Count > 0)
+        {
+            @for (int i = 0; i < Model.Exams.Count; i++)
+            {
+                <div class="card u-clearfix">
+                    <div class="card-body">
+                        <h2 class="card-body-heading">@Model.Exams[i].Title</h2>
+                        <h3>Time: @Model.Exams[i].Time mins</h3>
+                        <ul class="card-body-stars u-clearfix">
+                            @Model.Exams[i].Description
+                        </ul>
+                        @if (Model.ExamCompletionStatus[i])
+                        {
+                            <a href="#" class="card-button card-button-cta disabled">Exam Has Been Taken</a>
+                        }
+                        else if (i == Model.CurrentExamIndex)
+                        {
+                            <a href="@Url.Action("AttendExam", "Candidate", new { examId = Model.Exams[i].Id })" class="card-button card-button-cta active">
+                                Take exam
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="#" class="card-button card-button-cta disabled">Exam Not Available</a>
+                        }
+                    </div>
+                </div>
+            }
+        }
+        <div id="notificationBox" class="info_box">
+            <div class="info-title"><span>Begin the Test</span></div>
+            <div class="info-list">
+                <div class="info">1. After clicking  <span style="font-weight: 500; color: var(--primary-color-200);">'Start'</span> , the test timer will begin counting down.</div>
+                <div class="info">2. You can't select any option once time goes off.</div>
+                <div class="info">3. You'll get points on the basis of your correct answers.</div>
+            </div>
+            <div class="buttons">
+                <button id="startTestButton" class="btn btn-primary" onclick="startTest()">Start</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script>
+        // Function to show the notification box
+        function showTestNotification() {
+            var notificationBox = document.getElementById('notificationBox');
+            notificationBox.style.display = 'block';
+        }
+
+        window.onload = function () {
+            var takeExamButtons = document.querySelectorAll('.card-button-cta.active');
+            for (var i = 0; i < takeExamButtons.length; i++) {
+                takeExamButtons[i].addEventListener('click', showTestNotification);
+            }
+        };
+    </script>
+
+}

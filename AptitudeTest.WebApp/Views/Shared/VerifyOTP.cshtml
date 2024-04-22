@@ -1,0 +1,22 @@
+
+@model SendOTPViewModel
+
+<h2>Verify OTP</h2>
+
+@using (Html.BeginForm("VerifyOTP", "Authenticate", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.OTP)
+        @Html.TextBoxFor(m => m.OTP, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.OTP)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Verify OTP</button>
+}

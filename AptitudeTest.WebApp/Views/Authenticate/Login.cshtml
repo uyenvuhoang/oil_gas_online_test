@@ -1,0 +1,72 @@
+﻿﻿
+@model AptitudeTest.WebApp.ViewModels.LoginViewModel
+@using System.Web
+@{
+    Layout = "_Layout";
+}
+
+@if (!string.IsNullOrEmpty(Convert.ToString(TempData["SuccessRegister"])))
+{
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h5><i class="icon fas fa-check"></i> Message! @TempData["SuccessRegister"]</h5>
+    </div>
+}
+
+<div class="container">
+    <div class="login-box" style="margin: 100px 200px">
+        <div class="card">
+            <div class="card-body login-card-body">
+                <h1 class="font-weight-bold text-center">Sign in to start your session</h1>
+
+                <form id="account" asp-controller="Authenticate" asp-antiforgery="true" asp-action="Login" method="post">
+
+                    <div class="input-group mb-3" style="width: 70% ;padding: 10px 0 10px 0px; margin-left: 100px">
+                        <input asp-for="UserName" class="form-control" placeholder="UserName" />
+                        <div class="input-group-append" style="height: 50px;">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 70% ;padding: 0px 0 20px 0px; margin-left: 100px">
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                        <span class="text-danger">@Html.ValidationMessage("NameErr")</span>
+                    </div>
+
+
+                    <div class="input-group mb-3" style="width: 70% ;padding: 0 0 10px 0px; margin-left: 100px">
+                        <input type="password" asp-for="Password" autocomplete="new-password" class="form-control" placeholder="Password" />
+                        <div class="input-group-append" style="height: 50px;">
+                            <div class="input-group-text">
+                                <span class="fas fa-key"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 70% ;padding: 0px 0 20px 0px; margin-left: 100px">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                        <span class="text-danger">@Html.ValidationMessage("PassErr")</span>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <button type="submit" id="btnsubmit" class="btn btn-primary btn-block" style="border-radius: 30px; width: 70%; margin-left: 30px">Sign In</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <p class="mb-0 text-center">
+                    <a asp-controller="Authenticate" class="text-black-50" asp-action="EnterEmail">Register account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}*@
